@@ -45,7 +45,7 @@ export default function CreateSector() {
         terms_agree: agree,
       });
 
-      //console.log('Data created successfully:', response.data);
+      console.log('Data created successfully:', response.data);
       localStorage.setItem('userInputId', response.data.id);
       alert("Record added!")
       document.getElementById("name").value = "";
