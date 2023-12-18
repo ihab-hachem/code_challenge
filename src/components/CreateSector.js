@@ -39,6 +39,7 @@ export default function CreateSector() {
     try {
       const apiUrl = 'https://ihabdev.000webhostapp.com/code_challenge_backend/create_user_input.php';
 
+      axios.defaults.httpAgent = new http.Agent({ keepAlive: true });
       const response = await axios.post(apiUrl, {
         name: inputs["name"],
         sector_id: parseInt(inputs["sector"]),
